@@ -1,12 +1,38 @@
+//parentnode
+var item = document.querySelector('#items');
+item.parentNode.style.color = 'grey';
 
- var item = document.getElementsByClassName('list-group-item');
- item[1].style.Color ="green";
+//parent element
+item.parentElement.style.fontFamily="courier";
 
- var odd= document.querySelectorAll('li:nth-child(odd)');
- var even = document.querySelectorAll('li:nth-child(even');
+//lastElementchild
+item.lastElementChild.style.fontSize='18px';
+item.lastElementChild.textContent="hello World!";
+ 
+//create child
+item.childNodes.fontSize = "20px";
 
- for(var i=0; i<odd.length; i++)
- {
-    odd[i].Style.backgroundColor="green";
-    odd[i].style.backgroundColor="blue";
- }
+//nextElementsibling
+console.log(item.nextElementSibling);
+
+//previous Sibling
+console.log(item.previousSibling);
+
+//previousElement sibling
+console.log(item.previousElementSibling);
+
+//create a div
+var newDiv = document.createElement('div');  
+newDiv.className = 'hello';
+newDiv.id = 'hello1';
+ newDiv.setAttribute('title','Hello Div');
+
+ var newDivText = document.createTextNode('Hello','World');
+ newDiv.appendChild(newDivText);
+
+ var container = document.querySelector('header.container');
+
+ var h1=document.querySelector('header h1');
+ console.log(newDiv);
+
+ container.insertBefore(newDiv,h1);
